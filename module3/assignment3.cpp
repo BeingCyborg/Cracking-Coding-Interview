@@ -2,9 +2,9 @@
 #include <stack>
 using namespace std;
 
-bool isValidParanthese(string s)
+bool isValidParanthese(string s) //Time Complexity: O(n)
 {
-    std::stack<char> stack;
+    std::stack<char> stack; //Space Complexity: O(n)
     for (char c : s)
     {
         if (c == '(' || c == '{' || c == '[')
@@ -28,7 +28,10 @@ bool isValidParanthese(string s)
             return false;
         }
     }
+    
+    return stack.empty(); 
 }
+
 int main()
 {
     string s;
